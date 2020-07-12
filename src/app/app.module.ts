@@ -5,6 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { HttpClientModule } from "@angular/common/http";
+import { BingoNumberService } from "./bingo-number-service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,8 +15,9 @@ import { MatGridListModule } from "@angular/material/grid-list";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [BingoNumberService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
