@@ -1,17 +1,541 @@
 [{
     "value": 1,
-    "text": "one"
+    "text": "Kelly's Eye",
+    "explanation": "The pun is military slang;[3 possibly a reference to Ned Kelly, from Ned Kelly's helmet, the eye slot resembling the number 1. Also after the Valiant comic strip \"Kelly's Eye\" where the eponymous Kelly possessed a magic amulet.",
+    "drawn": false
+  },
+  {
+    "value": 11,
+    "text": "Legs eleven",
+    "explanation": "A reference to the shape of the number resembling a pair of legs, often chicken legs specifically.[6 The players often wolf whistle in response.",
+    "drawn": false
+  },
+  {
+    "value": 21,
+    "text": "Key of the Door",
+    "explanation": "The traditional age of majority.",
+    "drawn": false
+  },
+  {
+    "value": 31,
+    "text": "Get Up and Run",
+    "explanation": "Rhymes with \"(Thirty) One\"",
+    "drawn": false
+  },
+  {
+    "value": 41,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 51,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 61,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 71,
+    "text": "Bang on the Drum",
+    "explanation": "Rhymes with \"(Seventy) One\"",
+    "drawn": false
+  },
+  {
+    "value": 81,
+    "text": "Fat Lady with a walking stick",
+    "explanation": "The number 8 is supposed to visually represent a lady with ample bosom and hips, while the number 1 is supposed to visually represent a walking stick",
+    "drawn": false
   },
   {
     "value": 2,
-    "text": "two"
+    "text": "One little duck.",
+    "explanation": "From the resemblance of the number 2 to a duck; see '22'",
+    "drawn": false
+  },
+  {
+    "value": 12,
+    "text": "One dozen",
+    "explanation": "A reference to there being 12 units in one dozen.",
+    "drawn": false
+  },
+  {
+    "value": 22,
+    "text": "Two little ducks",
+    "explanation": "The numeral 22 resembles the profile of two ducks.",
+    "drawn": false
+  },
+  {
+    "value": 32,
+    "text": "Buckle My Shoe",
+    "explanation": "Rhymes with \"(Thirty) Two\"",
+    "drawn": false
+  },
+  {
+    "value": 42,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 52,
+    "text": "Chicken vindaloo",
+    "explanation": "Introduced by Butlins in 2003.",
+    "drawn": false
+  },
+  {
+    "value": 62,
+    "text": "Tickety-boo",
+    "explanation": "Rhymes with \"(Sixty) Two\"",
+    "drawn": false
+  },
+  {
+    "value": 72,
+    "text": "Danny La Rue",
+    "explanation": "Rhymes with \"(Seventy) Two\"",
+    "drawn": false
+  },
+  {
+    "value": 82,
+    "text": "",
+    "explanation": "",
+    "drawn": false
   },
   {
     "value": 3,
-    "text": "three"
+    "text": "Cup of tea",
+    "explanation": "Rhymes with \"Three\"",
+    "drawn": false
+  },
+  {
+    "value": 13,
+    "text": "Unlucky for some",
+    "explanation": "A reference to 13 being an unlucky number.",
+    "drawn": false
+  },
+  {
+    "value": 23,
+    "text": "Thee and Me",
+    "explanation": "Rhymes with 23",
+    "drawn": false
+  },
+  {
+    "value": 33,
+    "text": "All the threes",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 43,
+    "text": "down on your knees",
+    "explanation": "This was a phrase that was made popular during wartime by soldiers.",
+    "drawn": false
+  },
+  {
+    "value": 53,
+    "text": "Here comes Herbie",
+    "explanation": "53 is the racing number of Herbie the VW Beetle. Players may reply \"beep beep\"!",
+    "drawn": false
+  },
+  {
+    "value": 63,
+    "text": "Katie's bad knee",
+    "explanation": "Reference to the Warwickshire resident of the same name - local use only.",
+    "drawn": false
+  },
+  {
+    "value": 73,
+    "text": "Queen Bee. Under The Tree. Lucky 3",
+    "explanation": "Rhymes with \"(Seventy) Three\"",
+    "drawn": false
+  },
+  {
+    "value": 83,
+    "text": "Time for Tea",
+    "explanation": "Rhymes and scans",
+    "drawn": false
   },
   {
     "value": 4,
-    "text": "four"
+    "text": "Knock at the door",
+    "explanation": "Rhymes with \"Four\"",
+    "drawn": false
+  },
+  {
+    "value": 14,
+    "text": "The Lawnmower",
+    "explanation": "The original lawnmower had a 14-inch blade.",
+    "drawn": false
+  },
+  {
+    "value": 24,
+    "text": "Two dozen",
+    "explanation": "12 × 2 = 24. See 12.",
+    "drawn": false
+  },
+  {
+    "value": 34,
+    "text": "Ask for More",
+    "explanation": "Rhymes with \"(Thirty) Four\"",
+    "drawn": false
+  },
+  {
+    "value": 44,
+    "text": "Droopy drawers",
+    "explanation": "Rhyme that refers to sagging trousers.",
+    "drawn": false
+  },
+  {
+    "value": 54,
+    "text": "Man at the door",
+    "explanation": "Rhymes with \"(Fifty) Four\"",
+    "drawn": false
+  },
+  {
+    "value": 64,
+    "text": "Almost retired",
+    "explanation": "A reference to the former British male age of mandatory retirement - specifically being one year away from it.",
+    "drawn": false
+  },
+  {
+    "value": 74,
+    "text": "Hit the Floor",
+    "explanation": "Coined by Ann Fitzsimons",
+    "drawn": false
+  },
+  {
+    "value": 84,
+    "text": "Seven dozen",
+    "explanation": "7 x 12 = 84. Refer to 12 being \"a dozen\" above",
+    "drawn": false
+  },
+  {
+    "value": 5,
+    "text": "Man alive",
+    "explanation": "Rhymes with \"Five\"",
+    "drawn": false
+  },
+  {
+    "value": 15,
+    "text": "Young and Keen",
+    "explanation": "Fifteen rhymes with keen",
+    "drawn": false
+  },
+  {
+    "value": 25,
+    "text": "Duck and dive",
+    "explanation": "Rhymes with \"(Twenty) Five\", and is made up of a \"2\" - resembles a duck, and a \"5\" - resembles an upside-down \"2\".",
+    "drawn": false
+  },
+  {
+    "value": 35,
+    "text": "Jump and Jive",
+    "explanation": "A dance step",
+    "drawn": false
+  },
+  {
+    "value": 45,
+    "text": "Halfway there",
+    "explanation": "Being halfway towards 90",
+    "drawn": false
+  },
+  {
+    "value": 55,
+    "text": "All the fives",
+    "explanation": "Ged Kelly",
+    "drawn": false
+  },
+  {
+    "value": 65,
+    "text": "Retirement age, Stop work",
+    "explanation": "A reference to the former male British age of mandatory retirement.",
+    "drawn": false
+  },
+  {
+    "value": 75,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 85,
+    "text": "Staying alive",
+    "explanation": "Rhymes with \"(Eighty) Five\"",
+    "drawn": false
+  },
+  {
+    "value": 6,
+    "text": "Half a dozen",
+    "explanation": "A common phrase meaning six units (see \"12\" below)",
+    "drawn": false
+  },
+  {
+    "value": 16,
+    "text": "Never been kissed",
+    "explanation": "After the song Sweet Sixteen and Never Been Kissed",
+    "drawn": false
+  },
+  {
+    "value": 26,
+    "text": "A to Z",
+    "explanation": "A reference to the fact that there are twenty-six letters in the alphabet",
+    "drawn": false
+  },
+  {
+    "value": 36,
+    "text": "Triple dozen",
+    "explanation": "3 x 12 = 36. Refer to 12 above",
+    "drawn": false
+  },
+  {
+    "value": 46,
+    "text": "up to tricks",
+    "explanation": "rhyming",
+    "drawn": false
+  },
+  {
+    "value": 56,
+    "text": "Shotts Bus",
+    "explanation": "Refers to the former number of the bus from Glasgow to Shotts.",
+    "drawn": false
+  },
+  {
+    "value": 66,
+    "text": "Clickety click",
+    "explanation": "Rhymes with \"(Sixty) Six\"",
+    "drawn": false
+  },
+  {
+    "value": 76,
+    "text": "Trombones",
+    "explanation": "\"Seventy-Six Trombones\" is a popular marching song, from the musical The Music Man.",
+    "drawn": false
+  },
+  {
+    "value": 86,
+    "text": "Between the sticks",
+    "explanation": "Rhymes with \"(Eighty) Six\". Refers to the position of goalkeeper in football.",
+    "drawn": false
+  },
+  {
+    "value": 7,
+    "text": "Lucky",
+    "explanation": "7 is considered a lucky number in some cultures",
+    "drawn": false
+  },
+  {
+    "value": 17,
+    "text": "Dancing Queen",
+    "explanation": "ABBA's song Dancing Queen has the number mentioned in the lyrics.",
+    "drawn": false
+  },
+  {
+    "value": 27,
+    "text": "Duck and a crutch.",
+    "explanation": "The number 2 looks like a duck (see '2') and the number 7 looks like a crutch.",
+    "drawn": false
+  },
+  {
+    "value": 37,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 47,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 57,
+    "text": "Heinz Varieties",
+    "explanation": "Refers to \"Heinz 57\", the \"57 Varieties\" slogan of the H. J. Heinz Company.",
+    "drawn": false
+  },
+  {
+    "value": 67,
+    "text": "Stairway to Heaven",
+    "explanation": "Coined by Andrew \"CIP\" Lavelle",
+    "drawn": false
+  },
+  {
+    "value": 77,
+    "text": "Two little crutches",
+    "explanation": "The number 77 resembles 2 little \"Crutches\"",
+    "drawn": false
+  },
+  {
+    "value": 87,
+    "text": "Torquay in Devon",
+    "explanation": "Rhymes with \"(Eighty) Seven\". Torquay which is in the county of Devon, rather than one of several other Torquays which were elsewhere in the British Empire.",
+    "drawn": false
+  },
+  {
+    "value": 8,
+    "text": "Garden gate",
+    "explanation": "Rhymes with \"Eight\"",
+    "drawn": false
+  },
+  {
+    "value": 18,
+    "text": "Coming of Age",
+    "explanation": "Eighteen is the age of maturity in the UK.",
+    "drawn": false
+  },
+  {
+    "value": 28,
+    "text": "In a state.",
+    "explanation": "\"Two and eight\" is rhyming slang for \"state\".",
+    "drawn": false
+  },
+  {
+    "value": 38,
+    "text": "Christmas cake",
+    "explanation": "Cockney rhyming slang",
+    "drawn": false
+  },
+  {
+    "value": 48,
+    "text": "Four Dozen",
+    "explanation": "4 x 12 = 48. Refer to 12 above.",
+    "drawn": false
+  },
+  {
+    "value": 58,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 68,
+    "text": "Pick a Mate",
+    "explanation": "Coined by Edward James Mackey II",
+    "drawn": false
+  },
+  {
+    "value": 78,
+    "text": "39 more steps",
+    "explanation": "39 + 39 = 78. Refer to 39 being \"39 steps\" above.",
+    "drawn": false
+  },
+  {
+    "value": 88,
+    "text": "Two Fat Ladies",
+    "explanation": "The number 88 visually represents a lady next to another lady. Refer to 81 above. Players can reply with 'Wobble, wobble.'",
+    "drawn": false
+  },
+  {
+    "value": 9,
+    "text": "Doctor's Orders",
+    "explanation": "Number 9 was a laxative pill given out by army doctors in WWII.",
+    "drawn": false
+  },
+  {
+    "value": 19,
+    "text": "Goodbye Teens",
+    "explanation": "Nineteen is the age after which people stop being teenagers.",
+    "drawn": false
+  },
+  {
+    "value": 29,
+    "text": "Rise and Shine",
+    "explanation": "Rhymes with \"(Twenty) Nine\"",
+    "drawn": false
+  },
+  {
+    "value": 39,
+    "text": "Steps",
+    "explanation": "From the 39 Steps",
+    "drawn": false
+  },
+  {
+    "value": 49,
+    "text": "PC",
+    "explanation": "Refers to the BBC Radio series \"The Adventures of PC 49\". Usual response is \"Evening all\".",
+    "drawn": false
+  },
+  {
+    "value": 59,
+    "text": "The Brighton Line",
+    "explanation": "Quote from The Importance of Being Earnest.Also, 59 was the starting 2 digits of all original Brighton telephone numbers.",
+    "drawn": false
+  },
+  {
+    "value": 69,
+    "text": "Anyway up, Meal for Two, A Favourite of mine",
+    "explanation": "A reference to the 69 sex position.",
+    "drawn": false
+  },
+  {
+    "value": 79,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 89,
+    "text": "Nearly there",
+    "explanation": "89 is one away from 90 (the end of the bingo numbers).",
+    "drawn": false
+  },
+  {
+    "value": 10,
+    "text": "(Boris's) Den",
+    "explanation": "The name refers to whoever currently resides at Number 10 Downing Street.",
+    "drawn": false
+  },
+  {
+    "value": 20,
+    "text": "Getting Plenty",
+    "explanation": "Rhymes with \"Twenty\"",
+    "drawn": false
+  },
+  {
+    "value": 30,
+    "text": "Dirty Gertie",
+    "explanation": "Common rhyme derived from the given name Gertrude, used as a nickname for the statue La Delivrance installed in North London in 1927. The usage was reinforced by Dirty Gertie from Bizerte, a bawdy song sung by Allied soldiers in North Africa during the Second World War.[7",
+    "drawn": false
+  },
+  {
+    "value": 40,
+    "text": "Life Begins",
+    "explanation": "refers to the proverb 'life begins at forty'",
+    "drawn": false
+  },
+  {
+    "value": 50,
+    "text": "It's a bullseye!",
+    "explanation": "Referring to Snow White",
+    "drawn": false
+  },
+  {
+    "value": 60,
+    "text": "Grandma's getting frisky",
+    "explanation": "Pretty close to a rhyme with 'sixty'",
+    "drawn": false
+  },
+  {
+    "value": 70,
+    "text": "",
+    "explanation": "",
+    "drawn": false
+  },
+  {
+    "value": 80,
+    "text": "Gandhi's Breakfast",
+    "explanation": "\"Ate nothing\"",
+    "drawn": false
+  },
+  {
+    "value": 90,
+    "text": "Top of the shop",
+    "explanation": "90 is the highest (top) number in bingo. Shop refers to the entire game of bingo (and also rhymes with \"top\").",
+    "drawn": false
   }
 ]
