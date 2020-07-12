@@ -1,8 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { BingoNumberService } from "./bingo-number-service";
 import { BingoNumber } from "./bingo-number";
-
-let bingoNumbers: BingoNumber[] = [];
 
 @Component({
   selector: "app-root",
@@ -10,19 +8,43 @@ let bingoNumbers: BingoNumber[] = [];
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-  constructor(private bingoNumberService: BingoNumberService) {}
+  bingoNumbers: BingoNumber[] = [];
+
+  generatedNumber;
+  generatedNumberText;
+  previouslyGeneratedNumbers = [];
+
+  constructor(
+    private bingoNumberService: BingoNumberService,
+    private changeDetection: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
-    console.log(bingoNumbers);
-
     this.bingoNumberService.getJson().subscribe((data) => {
-      console.log("GOT NUMBERS!");
-      console.log(data);
-      bingoNumbers = data;
-
-      bingoNumbers.forEach((number) => {
-        console.log(`Number: ${number.value}`);
-      });
+      this.bingoNumbers = data;
+      console.log(this.bingoNumbers);
     });
+  }
+
+  nextNumber() {
+    let randomNumber = this.getRandomNumber();
+
+    while (randomNumber.drawn) {
+      randomNumber = this.getRandomNumber();
+    }
+    this.generatedNumber = randomNumber.value;
+    this.generatedNumberText = randomNumber.text;
+
+    const numberIndex = this.bingoNumbers.indexOf(randomNumber);
+    const updatedBingoNumber = randomNumber;
+    updatedBingoNumber.drawn = true;
+    this.bingoNumbers[numberIndex] = updatedBingoNumber;
+    this.changeDetection.detectChanges();
+  }
+
+  getRandomNumber() {
+    return this.bingoNumbers[
+      Math.floor(Math.random() * this.bingoNumbers.length)
+    ];
   }
 }

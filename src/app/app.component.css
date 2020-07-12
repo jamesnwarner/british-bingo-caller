@@ -1,0 +1,24 @@
+.main-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.numbers-container {
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.mat-grid-tile {
+  border: solid 2px #000;
+}
+
+.number-undrawn {
+  color: grey;
+  background-color: white;
+}
+
+.number-drawn {
+  color: black;
+  background-color: yellow;
+}

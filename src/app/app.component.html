@@ -1,13 +1,19 @@
-<h2>British Bingo!</h2>
-<div *ngIf="bingoNumbers.length > 0">
-  <p>Showing stuff!</p>
-  <ul>
-    <li *ngFor="let number of bingoNumbers">{{number.value}}</li>
-  </ul>
+<div class="main-container">
+  <h2>British Bingo!</h2>
+  <div class="numbers-container" *ngIf="bingoNumbers.length > 0">
+    <mat-grid-list role="list" cols="9" rowHeight="35px">
+      <mat-grid-tile role="listitem" *ngFor="let number of bingoNumbers"
+        [ngClass]="number.drawn ? 'number-drawn' : 'number-undrawn'">{{ number.value }}
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 
-  <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let number of bingoNumbers">{{ number.value }}</mat-grid-tile>
-  </mat-grid-list>
+  <div>
+    <h1>{{generatedNumber}}</h1>
+    <h2>{{generatedNumberText}}</h2>
+    <button mat-button color=" primary" (click)="nextNumber()">Next Number</button>
+  </div>
+
 </div>
 
 <router-outlet></router-outlet>
