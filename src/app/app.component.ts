@@ -1,13 +1,13 @@
-import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
-import { BingoNumberService } from "./bingo-number-service";
-import { BingoNumber } from "./bingo-number";
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { BingoNumberService } from './bingo-number-service';
+import { BingoNumber } from './bingo-number';
 
 import Speech from 'speak-tts';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   bingoNumbers: BingoNumber[] = [];
@@ -55,32 +55,21 @@ export class AppComponent implements OnInit {
 
   speakWords(words) {
     const speech = new Speech();
-//     speech.init({
-//       'volume': 1,
-//          'lang': 'en-GB',
-//          'rate': 1,
-//          'pitch': 1,
-//          'voice':'Google UK English Female',
-//          'splitSentences': true,
-//          'listeners': {
-//              'onvoiceschanged': (voices) => {
-//                  console.log("Event voiceschanged", voices)
-//              }
-//          }
-//  });
-speech.init().then(data => {
-  console.log(data);
+    speech.init().then((data) => {
+      console.log(data);
 
-  speech.setLanguage('en-GB');
-speech.setVoice('Google UK English Female')
- speech.speak({
-  text: words,
-}).then(() => {
-  console.log("Success !")
-}).catch(e => {
-  console.error("An error occurred :", e)
-});
-});
-
+      speech.setLanguage('en-GB');
+      speech.setVoice('Google UK English Female');
+      speech
+        .speak({
+          text: words,
+        })
+        .then(() => {
+          console.log('Success !');
+        })
+        .catch((e) => {
+          console.error('An error occurred :', e);
+        });
+    });
   }
 }

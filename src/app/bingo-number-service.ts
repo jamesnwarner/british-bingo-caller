@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BingoNumberService {
@@ -11,6 +11,6 @@ export class BingoNumberService {
   }
 
   public getJson(): Observable<any> {
-    return this.http.get("../assets/numbers.json");
+    return this.http.get('../assets/numbers.json');
   }
 }
