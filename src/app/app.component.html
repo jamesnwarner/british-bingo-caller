@@ -1,5 +1,8 @@
 <div class="main-container">
-  <h2>British Bingo!</h2>
+  <mat-toolbar color="primary">
+    <span>British Bingo!</span>
+  </mat-toolbar>
+  <br>
   <div class="numbers-container" *ngIf="bingoNumbers.length > 0">
     <mat-grid-list role="list" cols="9" rowHeight="35px">
       <mat-grid-tile role="listitem" *ngFor="let number of bingoNumbers"
@@ -11,7 +14,7 @@
   <div>
     <h1>{{generatedNumber}}</h1>
     <h2>{{generatedNumberText}}</h2>
-    <button mat-button color=" primary" (click)="nextNumber()">Next Number</button>
+    <button mat-raised-button color="primary" (click)="nextNumber()">Next Number</button>
   </div>
 
 </div>

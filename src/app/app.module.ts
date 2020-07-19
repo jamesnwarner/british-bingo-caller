@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { BingoNumberService } from './bingo-number-service';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +18,8 @@ import { BingoNumberService } from './bingo-number-service';
     BrowserAnimationsModule,
     MatGridListModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [BingoNumberService],
   bootstrap: [AppComponent],
