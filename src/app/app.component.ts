@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { BingoNumberService } from './bingo-number-service';
 import { BingoNumber } from './bingo-number';
+import { interval } from 'rxjs';
 
 import Speech from 'speak-tts';
 
@@ -17,6 +18,9 @@ export class AppComponent implements OnInit {
   previouslyGeneratedNumbers = [];
 
   speech;
+  sub;
+
+  gameRunning = false;
 
   constructor(
     private bingoNumberService: BingoNumberService,
@@ -40,6 +44,16 @@ export class AppComponent implements OnInit {
     });
   }
 
+  startBingo() {
+    this.gameRunning = true;
+
+    this.nextNumber();
+    console.log(this.sub);
+    if (!this.sub) {
+      this.startTimer();
+    }
+  }
+
   nextNumber() {
     let randomNumber = this.getRandomNumber();
 
@@ -56,7 +70,7 @@ export class AppComponent implements OnInit {
     this.bingoNumbers[numberIndex] = updatedBingoNumber;
     this.changeDetection.detectChanges();
 
-    const wordsToSay = `${randomNumber.text}, ${randomNumber.value}`;
+    const wordsToSay = `${randomNumber.text}. ${randomNumber.value}`;
     this.speakWords(wordsToSay);
   }
 
@@ -67,16 +81,30 @@ export class AppComponent implements OnInit {
   }
 
   speakWords(words) {
-    console.log(this.speech);
-    this.speech
-      .speak({
+    try {
+      console.log(this.speech);
+      this.speech.speak({
         text: words,
-      })
-      .then(() => {
-        console.log('Success !');
-      })
-      .catch((e) => {
-        console.error('An error occurred :', e);
       });
+      console.log('Words spoken!');
+    } catch (error) {
+      console.log(error);
+    }
+
+    console.log(this.sub);
+  }
+
+  startTimer() {
+    this.sub = interval(8000)
+      .pipe()
+      .subscribe(() => {
+        this.nextNumber();
+      });
+  }
+
+  pauseBingo() {
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
   }
 }

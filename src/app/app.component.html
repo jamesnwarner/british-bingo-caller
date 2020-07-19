@@ -12,9 +12,10 @@
   </div>
 
   <div>
-    <h1>{{generatedNumber}}</h1>
-    <h2>{{generatedNumberText}}</h2>
-    <button mat-raised-button color="primary" (click)="nextNumber()">Next Number</button>
+    <button mat-raised-button color="primary" (click)="startBingo()" [disabled]="gameRunning">Start</button>
+    <button mat-raised-button color="primary" (click)="pauseBingo()" [disabled]="!gameRunning">Pause</button>
+    <p>{{generatedNumber}}</p>
+    <p>{{generatedNumberText}}</p>
   </div>
 
 </div>
