@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
   generatedNumberText;
   previouslyGeneratedNumbers = [];
 
+  speech;
+
   constructor(
     private bingoNumberService: BingoNumberService,
     private changeDetection: ChangeDetectorRef
@@ -25,13 +27,24 @@ export class AppComponent implements OnInit {
     this.bingoNumberService.getJson().subscribe((data) => {
       this.bingoNumbers = data;
       console.log(this.bingoNumbers);
+
+      this.initializeSpeechLibrary();
+    });
+  }
+
+  initializeSpeechLibrary() {
+    this.speech = new Speech();
+    this.speech.init().then(() => {
+      this.speech.setLanguage('en-GB');
+      this.speech.setVoice('Google UK English Female');
     });
   }
 
   nextNumber() {
     let randomNumber = this.getRandomNumber();
 
-    while (randomNumber.drawn) {
+    while (randomNumber.drawn) {}
+    {
       randomNumber = this.getRandomNumber();
     }
     this.generatedNumber = randomNumber.value;
@@ -43,7 +56,7 @@ export class AppComponent implements OnInit {
     this.bingoNumbers[numberIndex] = updatedBingoNumber;
     this.changeDetection.detectChanges();
 
-    const wordsToSay = `${randomNumber.value}. ${randomNumber.text}`;
+    const wordsToSay = `${randomNumber.text}, ${randomNumber.value}`;
     this.speakWords(wordsToSay);
   }
 
@@ -54,22 +67,16 @@ export class AppComponent implements OnInit {
   }
 
   speakWords(words) {
-    const speech = new Speech();
-    speech.init().then((data) => {
-      console.log(data);
-
-      speech.setLanguage('en-GB');
-      speech.setVoice('Google UK English Female');
-      speech
-        .speak({
-          text: words,
-        })
-        .then(() => {
-          console.log('Success !');
-        })
-        .catch((e) => {
-          console.error('An error occurred :', e);
-        });
-    });
+    console.log(this.speech);
+    this.speech
+      .speak({
+        text: words,
+      })
+      .then(() => {
+        console.log('Success !');
+      })
+      .catch((e) => {
+        console.error('An error occurred :', e);
+      });
   }
 }
