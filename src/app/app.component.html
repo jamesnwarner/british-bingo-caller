@@ -4,18 +4,17 @@
   </mat-toolbar>
   <br>
   <div class="numbers-container" *ngIf="bingoNumbers.length > 0">
-    <mat-grid-list role="list" cols="9" rowHeight="35px">
+    <mat-grid-list role="list" cols="9" rowHeight="fit" [style.height.px]="myInnerHeight">
       <mat-grid-tile role="listitem" *ngFor="let number of bingoNumbers"
         [ngClass]="number.drawn ? 'number-drawn' : 'number-undrawn'">{{ number.value }}
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-
+  <br>
   <div>
-    <button mat-raised-button color="primary" (click)="startBingo()" [disabled]="gameRunning">Start</button>
-    <button mat-raised-button color="primary" (click)="pauseBingo()" [disabled]="!gameRunning">Pause</button>
-    <p>{{generatedNumber}}</p>
-    <p>{{generatedNumberText}}</p>
+    <button mat-raised-button color="primary" (click)="nextNumber()">Next Number</button>
+    <h1>{{generatedNumber}}</h1>
+    <h1>{{generatedNumberText}}</h1>
   </div>
 
 </div>

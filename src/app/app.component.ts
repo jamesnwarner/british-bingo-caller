@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { BingoNumberService } from './bingo-number-service';
 import { BingoNumber } from './bingo-number';
-import { interval } from 'rxjs';
 
 import Speech from 'speak-tts';
 
@@ -15,17 +14,16 @@ export class AppComponent implements OnInit {
 
   generatedNumber;
   generatedNumberText;
-  previouslyGeneratedNumbers = [];
+  drawnNumbers = [];
 
   speech;
-  sub;
 
-  gameRunning = false;
+  myInnerHeight = (window.innerHeight * 0.7);
 
   constructor(
     private bingoNumberService: BingoNumberService,
     private changeDetection: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.bingoNumberService.getJson().subscribe((data) => {
@@ -44,23 +42,14 @@ export class AppComponent implements OnInit {
     });
   }
 
-  startBingo() {
-    this.gameRunning = true;
-
-    this.nextNumber();
-    console.log(this.sub);
-    if (!this.sub) {
-      this.startTimer();
-    }
-  }
-
   nextNumber() {
     let randomNumber = this.getRandomNumber();
 
-    while (randomNumber.drawn) {}
-    {
+    while (this.drawnNumbers.includes(randomNumber.value)) {
       randomNumber = this.getRandomNumber();
     }
+    this.drawnNumbers.push(randomNumber.value);
+
     this.generatedNumber = randomNumber.value;
     this.generatedNumberText = randomNumber.text;
 
@@ -75,36 +64,24 @@ export class AppComponent implements OnInit {
   }
 
   getRandomNumber() {
-    return this.bingoNumbers[
-      Math.floor(Math.random() * this.bingoNumbers.length)
+    const undrawnNumbers = this.getUndrawnNumbers();
+    return undrawnNumbers[
+      Math.floor(Math.random() * undrawnNumbers.length)
     ];
   }
 
+  getUndrawnNumbers() {
+    const undrawnNumbers = this.bingoNumbers.filter((bingoNumber) => {
+      return bingoNumber.drawn === false;
+    });
+
+    console.log(undrawnNumbers.length + ' numbers remaining...');
+    return undrawnNumbers;
+  }
+
   speakWords(words) {
-    try {
-      console.log(this.speech);
-      this.speech.speak({
-        text: words,
-      });
-      console.log('Words spoken!');
-    } catch (error) {
-      console.log(error);
-    }
-
-    console.log(this.sub);
-  }
-
-  startTimer() {
-    this.sub = interval(8000)
-      .pipe()
-      .subscribe(() => {
-        this.nextNumber();
-      });
-  }
-
-  pauseBingo() {
-    if (this.sub) {
-      this.sub.unsubscribe();
-    }
+    this.speech.speak({
+      text: words,
+    });
   }
 }
